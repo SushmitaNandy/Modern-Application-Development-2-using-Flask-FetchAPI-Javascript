@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reminder Email</title>
+    
+</head>
+<body >
+    <p style="color:magenta">Dear {{name}},</p>
+    <p style="color:magenta">We noticed that you haven't visited our website for a while. </p>
+    <p style="color:magenta">Your Last Logged Out Time was {{time}}</p>
+    {% if new_comments > 0 %}
+        <p style="color:magenta">There are {{ new_comments }} new comments in your blogs.</p>
+    {% endif %}
+    {% if new_followers > 0 %}
+        <p style="color:magenta">There are {{ new_followers }} new followers who have started following you.</p>
+    {% endif %}
+    <p style="color:magenta">Happy Blogging.....</p>
+    <p style="color:magenta">Regards,</p>
+    <p style="color:magenta">Team Bloglite</p>
+</body>
+</html>

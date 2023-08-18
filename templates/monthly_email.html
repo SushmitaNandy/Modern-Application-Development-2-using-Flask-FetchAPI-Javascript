@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reminder Email</title>
+    
+</head>
+<body >
+    <p style="color:magenta">Dear {{name}},</p>
+    <p style="color:magenta">We noticed that you haven't visited our website for a while. </p>
+    <p style="color:magenta">Your Last Logged Out Time was {{time}}</p>
+    <p style="color:magenta"> Seems you are ver interested for below categories and we would like to post more of these contents <br>
+        {% for i in blog_dict['category'] %}
+            {{ i }}
+        {% endfor %}
+    </p>
+    <p style="color:magenta">Your Overall Post Status is as below </p>
+    <p style="color:magenta"> {{df.to_html() | safe }}</p>
+    
+    <br>
+    <p style="color:magenta">Happy Blogging.....</p>
+    <p style="color:magenta">Regards,</p>
+    <p style="color:magenta">Team Bloglite</p>
+</body>
+</html>
