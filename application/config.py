@@ -28,7 +28,7 @@ class LocalDevelopmentConfig(Config):
     MAIL_SERVER = "smtp.gmail.com"
     MAIL_PORT = 465
     MAIL_USE_SSL = True
-    MAIL_USERNAME = "21f1005425@ds.study.iitm.ac.in"
+    MAIL_USERNAME = "***********@ds.study.iitm.ac.in"
     with open("password.txt", "r") as file:
         MAIL_PASSWORD = file.read()
     CACHE_TYPE = "RedisCache"
